@@ -1,0 +1,118 @@
+@font-face {
+  font-family: 'mvinte';
+  src: url(../fonts/m20.TTF) format("opentype");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 18px "mvinte", Arial;
+  color: #ceaa0c;
+  padding-top: 100px;
+}
+
+.header {
+  background: #141414;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 0 10px #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.header .header-logo img {
+  width: 280px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.header .header-menu {
+  border: 2px solid #ceaa0c;
+  padding: 8px;
+  color: #ceaa0c;
+  text-decoration: none;
+  float: right;
+  margin-top: 25px;
+  border-radius: 5px;
+}
+.header .header-nav {
+  display: none;
+  font-size: 25px;
+}
+.header .header-nav ul li {
+  margin: 15px;
+  list-style: none;
+}
+.header .header-nav ul li a {
+  text-decoration: none;
+  color: #ccc;
+}
+.header .header-nav ul li a:hover {
+  color: #ceaa0c;
+}
+
+.container {
+  margin-top: 50px;
+}
+.container h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  text-shadow: 1px 2px 4px #353535;
+}
+.container .flex-jogos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container .flex-jogos .flex-col {
+  box-shadow: 0 0 10px #080808;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px;
+  padding-bottom: 10px;
+  border: 2px solid black;
+}
+.container .flex-jogos .flex-col p {
+  margin: 10px;
+}
+.container .flex-jogos .flex-col .flex-p {
+  color: black;
+}
+.container .flex-jogos .flex-col .flex-btn {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.container .flex-jogos .flex-col .btn {
+  color: white;
+  background-color: #141414;
+  padding: 8px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.container .flex-jogos .flex-col .btn:hover {
+  background-color: #ceaa0c;
+}
+
+.show {
+  display: block !important;
+}
+
+@media (min-width: 450px) {
+  .header .header-logo img {
+    width: 190px;
+  }
+  .header .header-menu {
+    display: none;
+  }
+  .header .header-nav {
+    display: block;
+    float: right;
+    margin-top: 40px;
+  }
+  .header .header-nav ul li {
+    display: inline-block;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
