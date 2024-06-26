@@ -1,273 +1,391 @@
-$primary: #202020;
-$secondary: #FCA311;
-$third: #480CA8;//terceira
+$primary: rgb(26, 26, 26);
+$secondary: rgb(212, 198, 0);
+$clear: rgb(122, 0, 170);
 $font: 'Baloo Paaji 2';
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: $font;
+}
+
+//centralizar o erro404
+.center {
+    text-align: center;
+}
+//container do erro404
+.container {
+    width: 1000px;
+    margin: 50px auto;
 }
 
 body {
-    height: 900vh;//equivale 100%
-    background-color: $primary;
+    font: 18px $font;
+    color: $secondary;
+    background-color: #250055; //#414141 
 }
 
-nav.menu-lateral {
-    width: 80px;
-    height: 100%;
+.header {
     background-color: $primary;
-    padding: 40px 0 40px 1%;
-    box-shadow: 3px 0 0 $secondary;
-
-    position: fixed;
+    width: 100%;
+    //position: fixed; => caso queira mudar de ideia
     top: 0;
-    left: 0;
-    overflow: hidden;//esconde as palavras
-    transition: .5s;
-    &.expandir{
-        width: 300px;
-        .txt-link {
-            margin-left: 40px;
-            opacity: 1;
-        }
+    box-shadow: 0 0 10px rgb(37, 37, 37);
+    padding: 10px;
+    box-sizing: border-box;
+    .header-logo img {
+        width: 120px;
     }
-    ul {
-        height: 100%;
-        list-style-type: none;
-        li.ativo {
-            background-color: $secondary;
-        }
-        li.item-menu {
-            transition: .2s;
-            &:hover {
-                background: $secondary;
-            }
-            a {
-                color: #fff;
-                text-decoration: none;
+    .header-menu {
+        border: 2px solid white;
+        border-radius: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        color: white;
+        text-decoration: none;
+        float: right;
+        margin-top: 20px;
+        margin-right: 10px;
+    }
+    .header-nav {
+        display: none;
+        ul {
+            list-style: none;
+            li {
+                margin: 15px;
                 font-size: 20px;
-                padding: 20px 4%;
-                display: flex;
-                margin-bottom: 20px;
-                line-height: 40px;
-                .icon {
-                    i {
-                        font-size: 30px;
-                        margin-left: 10px;
-                    }
+                a {
+                    text-decoration: none;
+                    color: white;
                 }
             }
         }
     }
 }
 
-ul {
-    li {
-      &.item-menu {
+.show {
+    display: block !important;
+}
+
+//section principal (versão para celular)
+.corpo {
+    padding-bottom: 1px;
+    padding-top: 10px;
+    background-color: #250055;
+    .btn-voltar {
         a {
-            .txt-link {
-                margin-left: 70px;
-                transition: .5s;
-                opacity: 0;
+            text-decoration: none;
+            .a-voltar {
+                font-size: 30px;
+                background-color: $secondary;
+                margin-left: 625px;
+                border-radius: 10px;
+                font-weight: bold;
+                padding: 5px;
+                color: $primary;
+                &:hover {
+                    background-color: rgb(94, 87, 0);
+                    color: white;
+                }
             }
         }
-      }  
-    }
-}
-
-.btn-expandir {
-    width: 100%;
-    padding-left: 10px;
-    i {
-        color: white;
-        font-size: 24px;
-        cursor: pointer;
-    }
-}
-
-.container {
-    margin-left: 150px;
-    h1 {
-        text-align: center;
-        color: $secondary;
-        font-size: 40px;
-        text-transform: uppercase;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.356);
     }
     .flex {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
         .flex-col {
-            text-align: center;
-            margin: 10px;
-            border: 2px solid black;
+            margin-left: 80px;
+            border: 1px solid black;
             border-radius: 10px;
-            padding-bottom: 10px;
-            padding-left: 10px;
-            padding-right: 10px;
-            color: $secondary;
-            transition: .2s;
-            cursor: pointer;
-            img {
-                border-radius: 10px;
+            margin-bottom: 20px;
+            background-color: $primary;
+            .btn {
+                font-size: 20px;
+                margin-left: 95px;
+                margin-bottom: 15px;
+                padding: 5px;
+                background-color: $secondary;
+                border: 1px solid black;
+                border-radius: 5px;
+                font-weight: bold;
             }
+            img {
+                width: 100%;
+                border-radius: 10px 10px 0 0;
+            }
+            p {
+                text-align: center;
+                padding-bottom: 10px;
+            }
+        }
+    }
+    .destaque {
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        color: $secondary;
+        font-family: $font;
+    }
+    .sobre {
+        text-align: center;
+        color: $secondary;
+        font-family: $font;
+    }
+    .sobre-p {
+        font-size: 20px;
+        color: rgb(211, 211, 211);
+        text-indent: 20px;
+        font-family: $font;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .titulo {
+        font-size: 50px;
+        text-align: center;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.226);
+        color: $secondary;
+        font-family: $font;
+    }
+}
+
+//section equipe (versão para celular)
+.corpo-equipe {
+    .sobre-equipe {
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 15px;
+        text-transform: uppercase;
+        text-decoration: underline;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.219);
+    }
+    .flex-equipe {
+        display: flex;
+        flex-wrap: wrap;
+        .flex-col-equipe {
+            margin-left: 80px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            background-color: $primary;
+            .btn {
+                font-size: 20px;
+                margin-left: 95px;
+                margin-bottom: 15px;
+                padding: 5px;
+                background-color: $secondary;
+                border: 1px solid black;
+                border-radius: 5px;
+                font-weight: bold;
+                &:hover {
+                    background-color: rgb(94, 87, 0);
+                    color: white;
+                }
+                }
+            img {
+                width: 100%;
+                border-radius: 10px 10px 0 0;
+            }
+            p {
+                text-align: center;
+                padding-bottom: 10px;
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.219);
+            }
+        }
+    }
+}
+
+//formatação do carrossel
+#carouselExample {
+    .carousel-inner {
+        .carousel-item {
+            img {
+                width: 350px;
+                margin: auto;
+            }
+        }
+    }
+}
+
+//versão para celurares
+.footer {
+    background-color: $primary;
+    color: $secondary;
+    text-align: center;
+    .footer-p {
+        font-size: 20px;
+    }
+    .footer-flex {
+        display: flex;
+        margin-left: 152px;
+        .contato {
+            padding-right: 15px;
+            font-size: 20px;
             a {
                 color: $secondary;
                 text-decoration: none;
             }
-            &:hover {
-                box-shadow: 0 0 10px $third; 
-                transform: scale(1.1);
+        }
+    }
+}
+
+@media (min-width: 450px) {
+    .header {
+        .header-logo {
+            img {
+                margin: 10px;
+            }
+        }
+        .header-menu {
+            //esconder o botão hamburguer
+            display: none;
+        }
+        .header-nav {
+            //mostrar o menu normal
+            display: block;
+            float: right; //jogar o menu para direita
+            margin-top: 15px;
+            ul {
+                li {
+                    display: inline-block;
+                    font-size: 30px;
+                    margin-right: 40px;
+                    transition: 0.2s;
+                    padding: 10px;
+                    border-radius: 10px;
+                    &:hover {
+                        background-color: $clear;
+                    }
+                }
             }
         }
     }
-}
 
-.breve {
-    color: $third;
-    text-transform: uppercase;
-    text-shadow: 0 1px 10px rgba(255, 255, 255, 0.151);
-    text-align: center;
-}
-
-.footer {
-    background: $third;
-    height: 140px;
-    .footer-p {
-        margin-left: 530px;
-        padding-top: 22px;
-        font-size: 30px;
-    }
-    .footer-flex {
-        margin-left: 675px;
-        display: flex;
-        .footer-item {
-            margin-left: 20px;
-            font-size: 25px;
-            transition: 0.2s;
-            a {
-                color: white;
-                text-decoration: none;
+    //principal (versão para PC)
+    .corpo {
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 303px;
+            .flex-col {
+                border: 1px solid black;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                .btn {
+                    font-size: 20px;
+                    margin-left: 95px;
+                    margin-bottom: 15px;
+                    padding: 5px;
+                    background-color: $secondary;
+                    border: 1px solid black;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    &:hover {
+                        background-color: rgb(94, 87, 0);
+                        color: white;
+                    }
+                }
+                img {
+                    width: 100%;
+                    border-radius: 10px 10px 0 0;
+                }
+                p {
+                    text-align: center;
+                    padding-bottom: 10px;
+                    color: $secondary;
+                    font-family: $font;
+                    margin-top: 15px;
+                    text-shadow: 0 0 10px rgba(255, 255, 255, 0.219);
+                }
             }
-            &:hover {
-                transform: scale(1.1);
-                text-shadow: 0 0 10px $primary;
+        }
+        .destaque {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            text-shadow: 0 0 10px $primary;
+            text-decoration: underline;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.219);
+        }
+        .sobre {
+            text-align: center;
+            text-shadow: 0 0 10px $primary;
+            text-decoration: underline;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.178);
+        }
+        .sobre-p {
+            font-size: 20px;
+            text-indent: 20px;
+            margin-left: 0;
+            margin-right: 0;
+            text-shadow: 0 0 10px $primary;
+        }
+        .titulo {
+            font-size: 50px;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.219);
+        }
+    }
+
+    //section equipe (versão para PC)
+    .corpo-equipe {
+        .sobre-equipe {
+            margin-top: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.219);
+        }
+        .flex-equipe {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 120px;
+            .flex-col-equipe {
+                border: 1px solid black;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                background-color: $primary;
+                img {
+                    width: 100%;
+                    border-radius: 10px 10px 0 0;
+                }
+                p {
+                    text-align: center;
+                    padding-bottom: 10px;
+                    text-shadow: 0 0 10px rgba(255, 255, 255, 0.219);
+                }
             }
         }
     }
-}
 
-.main {
-    .main-h1 {
-        font-size: 70px;
-        text-align: center;
-        color: $secondary;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.226);
-    }
-    .main-img {
-        margin-left: 545px;
-        border-radius: 10px;
-        border: 2px solid $third;
-        box-shadow: 0 0 10px #480ca898;
-    }
-    .main-h2 {
-        text-align: center;
-        font-size: 50px;
-        color: $secondary;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.171);
-    }
-    p {
-        padding-left: 100px;
-        text-indent: 40px;
-        font-size: 25px;
-        padding-bottom: 50px;
-        color: white;
-    }
-}
-
-.titulo-intro {
-    padding-left: 510px;
-    color: $secondary;
-    font-size: 40px;
-    text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.281);
-}
-
-.introducao {
-    font-size: 25px;
-    padding-bottom: 20px;
-    padding-left: 100px;
-    padding-top: 30px;
-    text-indent: 40px;
-    color: white;
-}
-
-.btn-oficial {
-    font-family: $font;
-    cursor: pointer;
-    margin-left: 600px;
-    padding: 5px;
-    font-size: 40px;
-    margin-bottom: 50px;
-    border: 2px solid #480CA8;
-    background-color: $secondary;
-    color: $primary;
-    border-radius: 10px;
-    transition: 0.5s;
-    &:hover {
-        background-color: #a3690b;
-        transform: scale(1.1);
-    }
-    a {
-        color: $primary;
-        text-decoration: none;
-        &:hover {
-            color: white;
+    //formatação do carrossel
+    #carouselExample {
+        .carousel-inner {
+            .carousel-item {
+                img {
+                    width: 500px;
+                    margin: auto;
+                }
+            }
         }
     }
-}
 
-.btn-baixar {
-    font-family: $font;
-    cursor: pointer;
-    margin-left: 600px;
-    padding: 5px;
-    font-size: 40px;
-    margin-bottom: 50px;
-    border: 2px solid #480CA8;
-    background-color: $secondary;
-    color: $primary;
-    border-radius: 10px;
-    transition: 0.5s;
-    &:hover {
-        background-color: #a3690b;
-        transform: scale(1.1);
-    }
-    a {
-        color: $primary;
-        text-decoration: none;
-        &:hover {
-            color: white;
+    //Rodapé do PC
+    .footer {
+        background-color: $primary;
+        bottom: 0;
+        padding: 20px;
+        .footer-p {
+            text-align: center;
+            color: $secondary;
+        }
+        .footer-flex {
+            display: flex;
+            margin-left: 614px;
+            .contato {
+                margin-right: 10px;
+                a {
+                    color: $secondary;
+                    text-decoration: none;
+                }
+            }
         }
     }
-}
-
-.titulo-equipe {
-    padding-left: 660px;
-    color: $secondary;
-    font-size: 40px;
-    text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.281);
-}
-
-.p-equipe {
-    font-size: 25px;
-    padding-bottom: 20px;
-    padding-left: 400px;
-    padding-top: 30px;
-    color: white;
 }

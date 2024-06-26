@@ -1,257 +1,350 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Baloo Paaji 2";
 }
 
-body {
-  height: 900vh;
-  background-color: #202020;
-}
-
-nav.menu-lateral {
-  width: 80px;
-  height: 100%;
-  background-color: #202020;
-  padding: 40px 0 40px 1%;
-  box-shadow: 3px 0 0 #FCA311;
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  transition: .5s;
-}
-nav.menu-lateral.expandir {
-  width: 300px;
-}
-nav.menu-lateral.expandir .txt-link {
-  margin-left: 40px;
-  opacity: 1;
-}
-nav.menu-lateral ul {
-  height: 100%;
-  list-style-type: none;
-}
-nav.menu-lateral ul li.ativo {
-  background-color: #FCA311;
-}
-nav.menu-lateral ul li.item-menu {
-  transition: .2s;
-}
-nav.menu-lateral ul li.item-menu:hover {
-  background: #FCA311;
-}
-nav.menu-lateral ul li.item-menu a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 20px 4%;
-  display: flex;
-  margin-bottom: 20px;
-  line-height: 40px;
-}
-nav.menu-lateral ul li.item-menu a .icon i {
-  font-size: 30px;
-  margin-left: 10px;
-}
-
-ul li.item-menu a .txt-link {
-  margin-left: 70px;
-  transition: .5s;
-  opacity: 0;
-}
-
-.btn-expandir {
-  width: 100%;
-  padding-left: 10px;
-}
-.btn-expandir i {
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
+.center {
+  text-align: center;
 }
 
 .container {
-  margin-left: 150px;
-}
-.container h1 {
-  text-align: center;
-  color: #FCA311;
-  font-size: 40px;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.356);
-}
-.container .flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.container .flex .flex-col {
-  text-align: center;
-  margin: 10px;
-  border: 2px solid black;
-  border-radius: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: #FCA311;
-  transition: .2s;
-  cursor: pointer;
-}
-.container .flex .flex-col img {
-  border-radius: 10px;
-}
-.container .flex .flex-col a {
-  color: #FCA311;
-  text-decoration: none;
-}
-.container .flex .flex-col:hover {
-  box-shadow: 0 0 10px #480CA8;
-  transform: scale(1.1);
+  width: 1000px;
+  margin: 50px auto;
 }
 
-.breve {
-  color: #480CA8;
-  text-transform: uppercase;
-  text-shadow: 0 1px 10px rgba(255, 255, 255, 0.151);
+body {
+  font: 18px "Baloo Paaji 2";
+  color: #d4c600;
+  background-color: #250055;
+}
+
+.header {
+  background-color: #1a1a1a;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 0 10px #252525;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.header .header-logo img {
+  width: 120px;
+}
+.header .header-menu {
+  border: 2px solid white;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: white;
+  text-decoration: none;
+  float: right;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+.header .header-nav {
+  display: none;
+}
+.header .header-nav ul {
+  list-style: none;
+}
+.header .header-nav ul li {
+  margin: 15px;
+  font-size: 20px;
+}
+.header .header-nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.show {
+  display: block !important;
+}
+
+.corpo {
+  padding-bottom: 1px;
+  padding-top: 10px;
+  background-color: #250055;
+}
+.corpo .btn-voltar a {
+  text-decoration: none;
+}
+.corpo .btn-voltar a .a-voltar {
+  font-size: 30px;
+  background-color: #d4c600;
+  margin-left: 625px;
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 5px;
+  color: #1a1a1a;
+}
+.corpo .btn-voltar a .a-voltar:hover {
+  background-color: #5e5700;
+  color: white;
+}
+.corpo .flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.corpo .flex .flex-col {
+  margin-left: 80px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: #1a1a1a;
+}
+.corpo .flex .flex-col .btn {
+  font-size: 20px;
+  margin-left: 95px;
+  margin-bottom: 15px;
+  padding: 5px;
+  background-color: #d4c600;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.corpo .flex .flex-col img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.corpo .flex .flex-col p {
   text-align: center;
+  padding-bottom: 10px;
+}
+.corpo .destaque {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #d4c600;
+  font-family: "Baloo Paaji 2";
+}
+.corpo .sobre {
+  text-align: center;
+  color: #d4c600;
+  font-family: "Baloo Paaji 2";
+}
+.corpo .sobre-p {
+  font-size: 20px;
+  color: lightgray;
+  text-indent: 20px;
+  font-family: "Baloo Paaji 2";
+  margin-left: 0;
+  margin-right: 0;
+}
+.corpo .titulo {
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.226);
+  color: #d4c600;
+  font-family: "Baloo Paaji 2";
+}
+
+.corpo-equipe .sobre-equipe {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.219);
+}
+.corpo-equipe .flex-equipe {
+  display: flex;
+  flex-wrap: wrap;
+}
+.corpo-equipe .flex-equipe .flex-col-equipe {
+  margin-left: 80px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: #1a1a1a;
+}
+.corpo-equipe .flex-equipe .flex-col-equipe .btn {
+  font-size: 20px;
+  margin-left: 95px;
+  margin-bottom: 15px;
+  padding: 5px;
+  background-color: #d4c600;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.corpo-equipe .flex-equipe .flex-col-equipe .btn:hover {
+  background-color: #5e5700;
+  color: white;
+}
+.corpo-equipe .flex-equipe .flex-col-equipe img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.corpo-equipe .flex-equipe .flex-col-equipe p {
+  text-align: center;
+  padding-bottom: 10px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.219);
+}
+
+#carouselExample .carousel-inner .carousel-item img {
+  width: 350px;
+  margin: auto;
 }
 
 .footer {
-  background: #480CA8;
-  height: 140px;
+  background-color: #1a1a1a;
+  color: #d4c600;
+  text-align: center;
 }
 .footer .footer-p {
-  margin-left: 530px;
-  padding-top: 22px;
-  font-size: 30px;
+  font-size: 20px;
 }
 .footer .footer-flex {
-  margin-left: 675px;
   display: flex;
+  margin-left: 152px;
 }
-.footer .footer-flex .footer-item {
-  margin-left: 20px;
-  font-size: 25px;
-  transition: 0.2s;
+.footer .footer-flex .contato {
+  padding-right: 15px;
+  font-size: 20px;
 }
-.footer .footer-flex .footer-item a {
-  color: white;
+.footer .footer-flex .contato a {
+  color: #d4c600;
   text-decoration: none;
 }
-.footer .footer-flex .footer-item:hover {
-  transform: scale(1.1);
-  text-shadow: 0 0 10px #202020;
-}
 
-.main .main-h1 {
-  font-size: 70px;
-  text-align: center;
-  color: #FCA311;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.226);
-}
-.main .main-img {
-  margin-left: 545px;
-  border-radius: 10px;
-  border: 2px solid #480CA8;
-  box-shadow: 0 0 10px #480ca898;
-}
-.main .main-h2 {
-  text-align: center;
-  font-size: 50px;
-  color: #FCA311;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.171);
-}
-.main p {
-  padding-left: 100px;
-  text-indent: 40px;
-  font-size: 25px;
-  padding-bottom: 50px;
-  color: white;
-}
+@media (min-width: 450px) {
+  .header .header-logo img {
+    margin: 10px;
+  }
+  .header .header-menu {
+    display: none;
+  }
+  .header .header-nav {
+    display: block;
+    float: right;
+    margin-top: 15px;
+  }
+  .header .header-nav ul li {
+    display: inline-block;
+    font-size: 30px;
+    margin-right: 40px;
+    transition: 0.2s;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .header .header-nav ul li:hover {
+    background-color: #7a00aa;
+  }
 
-.titulo-intro {
-  padding-left: 510px;
-  color: #FCA311;
-  font-size: 40px;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.281);
-}
+  .corpo .flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 303px;
+  }
+  .corpo .flex .flex-col {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .corpo .flex .flex-col .btn {
+    font-size: 20px;
+    margin-left: 95px;
+    margin-bottom: 15px;
+    padding: 5px;
+    background-color: #d4c600;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .corpo .flex .flex-col .btn:hover {
+    background-color: #5e5700;
+    color: white;
+  }
+  .corpo .flex .flex-col img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  .corpo .flex .flex-col p {
+    text-align: center;
+    padding-bottom: 10px;
+    color: #d4c600;
+    font-family: "Baloo Paaji 2";
+    margin-top: 15px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.219);
+  }
+  .corpo .destaque {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-shadow: 0 0 10px #1a1a1a;
+    text-decoration: underline;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.219);
+  }
+  .corpo .sobre {
+    text-align: center;
+    text-shadow: 0 0 10px #1a1a1a;
+    text-decoration: underline;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.178);
+  }
+  .corpo .sobre-p {
+    font-size: 20px;
+    text-indent: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    text-shadow: 0 0 10px #1a1a1a;
+  }
+  .corpo .titulo {
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.219);
+  }
 
-.introducao {
-  font-size: 25px;
-  padding-bottom: 20px;
-  padding-left: 100px;
-  padding-top: 30px;
-  text-indent: 40px;
-  color: white;
-}
+  .corpo-equipe .sobre-equipe {
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.219);
+  }
+  .corpo-equipe .flex-equipe {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 120px;
+  }
+  .corpo-equipe .flex-equipe .flex-col-equipe {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #1a1a1a;
+  }
+  .corpo-equipe .flex-equipe .flex-col-equipe img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  .corpo-equipe .flex-equipe .flex-col-equipe p {
+    text-align: center;
+    padding-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.219);
+  }
 
-.btn-oficial {
-  font-family: "Baloo Paaji 2";
-  cursor: pointer;
-  margin-left: 600px;
-  padding: 5px;
-  font-size: 40px;
-  margin-bottom: 50px;
-  border: 2px solid #480CA8;
-  background-color: #FCA311;
-  color: #202020;
-  border-radius: 10px;
-  transition: 0.5s;
-}
-.btn-oficial:hover {
-  background-color: #a3690b;
-  transform: scale(1.1);
-}
-.btn-oficial a {
-  color: #202020;
-  text-decoration: none;
-}
-.btn-oficial a:hover {
-  color: white;
-}
+  #carouselExample .carousel-inner .carousel-item img {
+    width: 500px;
+    margin: auto;
+  }
 
-.btn-baixar {
-  font-family: "Baloo Paaji 2";
-  cursor: pointer;
-  margin-left: 600px;
-  padding: 5px;
-  font-size: 40px;
-  margin-bottom: 50px;
-  border: 2px solid #480CA8;
-  background-color: #FCA311;
-  color: #202020;
-  border-radius: 10px;
-  transition: 0.5s;
-}
-.btn-baixar:hover {
-  background-color: #a3690b;
-  transform: scale(1.1);
-}
-.btn-baixar a {
-  color: #202020;
-  text-decoration: none;
-}
-.btn-baixar a:hover {
-  color: white;
-}
-
-.titulo-equipe {
-  padding-left: 660px;
-  color: #FCA311;
-  font-size: 40px;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.281);
-}
-
-.p-equipe {
-  font-size: 25px;
-  padding-bottom: 20px;
-  padding-left: 400px;
-  padding-top: 30px;
-  color: white;
+  .footer {
+    background-color: #1a1a1a;
+    bottom: 0;
+    padding: 20px;
+  }
+  .footer .footer-p {
+    text-align: center;
+    color: #d4c600;
+  }
+  .footer .footer-flex {
+    display: flex;
+    margin-left: 614px;
+  }
+  .footer .footer-flex .contato {
+    margin-right: 10px;
+  }
+  .footer .footer-flex .contato a {
+    color: #d4c600;
+    text-decoration: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
